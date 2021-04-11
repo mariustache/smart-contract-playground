@@ -1,5 +1,5 @@
 {
-  "name": "Solitdity playground",
+  "name": "solidity-playground",
   "description": "Playground for Solidity learning using APIs from established projects",
   "scripts": {
     "compile": "npx truffle compile",

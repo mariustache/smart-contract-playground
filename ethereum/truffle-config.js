@@ -9,13 +9,23 @@ const ropstenProvider = new HDWalletProvider({
   providerOrUrl: "https://ropsten.infura.io/v3/296aa7d7431345228235a2bcfac66591"
 });
 
+const rinkebyPrivateKey = process.env.ROPSTEN_PRIVATE_KEY;
+const rinkebyProvider = new HDWalletProvider({
+  privateKeys: [rinkebyPrivateKey],
+  providerOrUrl: "https://rinkeby.infura.io/v3/296aa7d7431345228235a2bcfac66591"
+});
+
 module.exports = {
   networks: {
     ropsten: {
       provider: ropstenProvider,
       network_id: 3
     },
-    development: {
+    rinkeby: {
+      provider: rinkebyProvider,
+      network_id: 4
+    },
+    ganache: {
       host: "127.0.0.1",
       port: 7545,
       network_id: "*"
@@ -30,15 +40,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      // version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
-      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
-      //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
-      //  },
-      //  evmVersion: "byzantium"
-      // }
+      version: "^0.6.0"
     }
   },
 

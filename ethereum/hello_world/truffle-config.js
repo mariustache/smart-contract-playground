@@ -6,13 +6,13 @@ const HDWalletProvider = require("@truffle/hdwallet-provider");
 const ropstenPrivateKey = process.env.ROPSTEN_PRIVATE_KEY;
 const ropstenProvider = new HDWalletProvider({
   privateKeys: [ropstenPrivateKey],
-  providerOrUrl: "https://ropsten.infura.io/v3/296aa7d7431345228235a2bcfac66591"
+  providerOrUrl: "https://ropsten.infura.io/v3/7edf861ec8024272adf786dcd594e8a3"
 });
 
-const rinkebyPrivateKey = process.env.ROPSTEN_PRIVATE_KEY;
+const rinkebyPrivateKey = process.env.RINKEBY_PRIVATE_KEY;
 const rinkebyProvider = new HDWalletProvider({
   privateKeys: [rinkebyPrivateKey],
-  providerOrUrl: "https://rinkeby.infura.io/v3/296aa7d7431345228235a2bcfac66591"
+  providerOrUrl: "https://rinkeby.infura.io/v3/7edf861ec8024272adf786dcd594e8a3"
 });
 
 module.exports = {

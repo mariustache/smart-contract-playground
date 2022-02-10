@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  ganache-cli:
+    build:
+      context: ganache
+      args:
+        GANACHE_MNEMONIC: $GANACHE_MNEMONIC
+    ports:
+      - "8545:8545"
+  hello_world:
+    build: hello_world
+    volumes:
+      - ./hello_world:/code
+      

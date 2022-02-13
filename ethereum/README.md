@@ -13,6 +13,4 @@ docker-compose start
 Secure information such as private keys should not appear explicitly in the source code. To ensure this requirement, private information is stored in an **.env** file. You can opt to use a mnemonic or a private key in order to instantiate the provider (through HDWalletProvider). See https://www.npmjs.com/package/@truffle/hdwallet-provider for more details.
 
 # Environment variables to be defined
-- ROPSTEN_PRIVATE_KEY
-- RINKEBY_PRIVATE_KEY
 - GANACHE_MNEMONIC

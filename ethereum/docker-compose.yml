@@ -11,4 +11,6 @@ services:
     build: hello_world
     volumes:
       - ./hello_world:/code
+    stdin_open: true
+    tty: true
       

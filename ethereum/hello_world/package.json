@@ -9,7 +9,7 @@
     "test": "npx truffle test"
   },
   "dependencies": {
-    "@chainlink/contracts": "^0.1.7",
+    "@chainlink/contracts": "^0.4.0",
     "@truffle/hdwallet-provider": "^1.2.6",
     "dotenv": "^8.2.0"
   }

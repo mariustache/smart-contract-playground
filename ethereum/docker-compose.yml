@@ -7,10 +7,16 @@ services:
         GANACHE_MNEMONIC: $GANACHE_MNEMONIC
     ports:
       - "8545:8545"
-  hello_world:
-    build: hello_world
+  backend:
+    build: backend
     volumes:
-      - ./hello_world:/code
+      - ./backend:/code
     stdin_open: true
     tty: true
+  frontend:
+    build: frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 8080:8080
       

@@ -1,16 +1,12 @@
 {
-  "name": "solidity-playground",
-  "description": "Playground for Solidity learning using APIs from established projects",
-  "scripts": {
-    "compile": "npx truffle compile",
-    "deploy:ropsten": "npx truffle migrate --network ropsten",
-    "deploy:rinkeby": "npx truffle migrate --network rinkeby",
-    "deploy:ganache": "npx truffle migrate --network ganache",
-    "test": "npx truffle test"
-  },
-  "dependencies": {
-    "@chainlink/contracts": "^0.4.0",
-    "@truffle/hdwallet-provider": "^1.2.6",
-    "dotenv": "^8.2.0"
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "Web3 application",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "express": "^4.16.1"
+    }
   }
-}

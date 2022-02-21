@@ -7,12 +7,14 @@ services:
         GANACHE_MNEMONIC: $GANACHE_MNEMONIC
     ports:
       - "8545:8545"
-  backend:
-    build: backend
+  contracts:
+    build: contracts
     volumes:
-      - ./backend:/code
+      - ./contracts:/code
     stdin_open: true
     tty: true
+  backend:
+    build: backend
   frontend:
     build: frontend
     volumes:

@@ -1,5 +1,6 @@
 FROM node:latest
-
-RUN npm install -g truffle
-
-CMD ["/bin/bash"]
+WORKDIR /web3app
+COPY ./package.json package.json
+RUN npm install
+COPY . .
+CMD ["npm", "start"]

@@ -9,4 +9,5 @@ docker start web3app_container
 docker exec -it web3app_container /bin/bash
 ```
 # Environment variables to be defined
-WEB3_PROVIDER
+PROVIDER
+PORT

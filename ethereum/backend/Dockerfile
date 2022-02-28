@@ -1,6 +1,5 @@
 FROM node:latest
-WORKDIR /web3app
-COPY ./package.json package.json
+WORKDIR /app
+COPY ./ ./
 RUN npm install
-COPY . .
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]

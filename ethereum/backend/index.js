@@ -1,15 +1,17 @@
+require('dotenv').config()
 const express = require('express')
+const contracts = require('./routes/contracts')
+const logger = require('./util/logger')
+
 const app = express()
-const test = require('./routes/Test')
 
-const DEFAULT_PORT = 3000;
-
-app.use('/test', test)
+app.use('/contracts', contracts)
 
 app.get('/', function (req, res) {
   res.send('Hello World')
-});
+})
 
-app.listen(DEFAULT_PORT, () => {
-    console.log(`listening at localhost:${DEFAULT_PORT}`)
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    logger.info(`listening at localhost:${PORT}`)
+})

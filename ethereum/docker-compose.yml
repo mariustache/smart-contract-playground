@@ -6,7 +6,9 @@ services:
       args:
         GANACHE_MNEMONIC: $GANACHE_MNEMONIC
     ports:
-      - "8545:8545"
+      - 8545:8545
+    volumes:
+      - ./ganache/db:/db
   contracts:
     build: contracts
     volumes:
@@ -19,6 +21,8 @@ services:
       - ./backend:/app
     ports:
       - 3000:3000
+    stdin_open: true
+    tty: true
   frontend:
     build: frontend
     volumes:
